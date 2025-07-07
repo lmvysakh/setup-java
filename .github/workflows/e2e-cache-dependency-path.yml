@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - check_12520
       - releases/*
     paths-ignore:
       - '**.md'
@@ -21,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -47,7 +48,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
     needs: gradle1-save
     steps:
       - name: Checkout
@@ -72,7 +73,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
     needs: gradle1-save
     steps:
       - name: Checkout

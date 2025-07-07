@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - check_12520
       - releases/*
     paths-ignore:
       - '**.md'
@@ -20,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-13, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution: [
             'temurin',
             'adopt',
@@ -84,7 +85,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution: ['temurin', 'zulu', 'liberica']
         version:
           - '11.0'
@@ -134,7 +135,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution:
           [
             'temurin',
@@ -170,7 +171,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution:
           [
             'temurin',
@@ -220,7 +221,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-13, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         version: ['17-ea', '15.0.0-ea.14']
     steps:
       - name: Checkout
@@ -242,7 +243,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         version: ['17-ea']
     steps:
       - name: Checkout
@@ -264,7 +265,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         version: ['17-ea', '21-ea']
     steps:
       - name: Checkout
@@ -286,7 +287,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-13, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution:
           ['temurin', 'zulu', 'liberica', 'semeru', 'sapmachine', 'jetbrains']
         java-package: ['jre']
@@ -401,7 +402,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution: ['temurin', 'microsoft', 'corretto']
         java-version-file: ['.java-version', '.tool-versions']
     steps:
@@ -430,7 +431,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution: ['temurin', 'zulu', 'liberica', 'microsoft', 'corretto']
         java-version-file: ['.java-version', '.tool-versions']
     steps:
@@ -458,7 +459,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution: ['adopt', 'adopt-openj9', 'zulu']
         java-version-file: ['.java-version', '.tool-versions']
     steps:
@@ -486,7 +487,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-15, macos-15-arm64]
         distribution: ['adopt', 'zulu', 'liberica']
         java-version-file: ['.java-version', '.tool-versions']
     steps:
