@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-15, macos-15-arm64]
+        os: [macos-15]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -58,7 +58,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-15, macos-15-arm64]
+        os: [macos-15]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -94,7 +94,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-15, macos-15-arm64]
+        os: [macos-15]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -131,7 +131,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-15, macos-15-arm64]
+        os: [macos-15]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
