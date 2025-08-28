@@ -23,6 +23,8 @@ This action allows you to work with Java and Scala projects.
 - V2 supports custom distributions and provides support for Azul Zulu OpenJDK, Eclipse Temurin and AdoptOpenJDK  out of the box. V1 supports only Azul Zulu OpenJDK.
 - V2 requires you to specify distribution along with the version. V1 defaults to Azul Zulu OpenJDK, only version input is required. Follow [the migration guide](docs/switching-to-v2.md) to switch from V1 to V2.
 
+For information about the latest releases, recent updates, and newly supported distributions, please refer to the `setup-java` [Releases](https://github.com/actions/setup-java/releases).
+
 ## Usage
 
   - `java-version`: The Java version that is going to be set up. Takes a whole or [semver](#supported-version-syntax) Java version. If not specified, the action will expect `java-version-file` input to be specified.
